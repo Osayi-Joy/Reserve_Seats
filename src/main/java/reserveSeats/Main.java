@@ -1,4 +1,4 @@
-package collectionsFrameWork;
+package reserveSeats;
 
 public class Main {
     public static void main(String[] args) {

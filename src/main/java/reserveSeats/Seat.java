@@ -1,11 +1,11 @@
-package collectionsFrameWork;
+package reserveSeats;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Seat{
+public class Seat implements Comparable<Seat> {
     private final String seatNumber;
     private boolean reserved = false;
 
@@ -34,4 +34,8 @@ public class Seat{
         }
     }
 
+    @Override
+    public int compareTo(Seat seat) {
+        return this.seatNumber.compareToIgnoreCase(seat.getSeatNumber());
+    }
 }
